@@ -54,13 +54,13 @@ h1, h2, h3, h4, h5, h6{
     font-size: 0.55rem;
     text-transform: uppercase;
     padding: 0.4rem 0.6rem;
-    border-radius:15px;
+    border-radius:8px;
     margin-bottom:0.5rem;
 }
 
 .category-sports{ background: var(--sports-color)}
-.category-sports{background: var(--sports-color)}
-.category-sports{background: var(--sports-color)}
+.category-ent {background: var(--ent-color)}
+.category-tech { background: var(--tech-color) }
 
 .btn{
     display: inline-block;
@@ -78,8 +78,55 @@ h1, h2, h3, h4, h5, h6{
     display: block;
     width:100%;
     text-align: center;
-
 }
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.card{
+    background: #ffff;
+    padding:1rem;
+}
+
+.bg-dark{
+    background: var(--dark-color);
+    color: #ffff;
+}
+
+.bg-primary{
+    background: var(--primary-color);
+    color: #ffff;
+}
+
+.bg-secondary{
+    background: var(--secondary-color);
+    color: #ffff;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a{
+    color: white;
+}
+
+.py-1{padding: 1.5rem 0}
+.py-1{padding: 2rem 0}
+.py-1{padding: 3rem 0}
+
+.p-1{padding: 1.5rem}
+.p-1{padding: 2rem}
+.p-1{padding: 3rem}
+
 
 /* Navigation */
 #main-nav{
@@ -164,3 +211,38 @@ h1, h2, h3, h4, h5, h6{
 #showcase .showcase-content p{
  margin-bottom: 1rem;
 }
+
+/* Home Article */
+
+#home-articles .articles-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container > *:last-child {
+    grid-column: 2 / span 2;
+}
+
+#article .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: 0.5rem;
+}
+
+#article .meta .category {
+    margin-top: 0.4rem;
+}
+
+
